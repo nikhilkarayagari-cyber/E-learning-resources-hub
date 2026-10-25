@@ -1,0 +1,4 @@
+[build]
+  publish = "public"
+
+# This is a static frontend. Supabase provides authentication, database, and storage.

@@ -1,0 +1,9 @@
+{
+  "name": "elearning-resource-hub",
+  "version": "1.0.0",
+  "description": "Responsive E-Learning Resource Hub demo built with Node.js, Express, HTML, CSS and vanilla JavaScript.",
+  "main": "server.js",
+  "scripts": { "start": "node server.js", "dev": "node server.js" },
+  "dependencies": { "express": "^4.21.2" },
+  "engines": { "node": ">=18" }
+}

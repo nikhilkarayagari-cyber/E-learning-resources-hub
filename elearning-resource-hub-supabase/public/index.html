@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#f6f7fb" />
+  <meta name="description" content="Explore courses, track your learning, and build new skills with E-Learning Resource Hub." />
+  <title>E-Learning Resource Hub</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="#" aria-label="E-Learning home">
+        <span class="brand-mark"><span></span><span></span><span></span></span>
+        <span>learn<span class="brand-dot">.</span>hub</span>
+      </a>
+      <div class="workspace-label">WORKSPACE</div>
+      <nav class="nav-menu" aria-label="Main navigation">
+        <button class="nav-item active" data-view="overview"><span class="nav-icon">⌂</span> Overview</button>
+        <button class="nav-item" data-view="courses"><span class="nav-icon">▤</span> Explore courses <span class="nav-count" id="courseCountNav">8</span></button>
+        <button class="nav-item" data-view="dashboard"><span class="nav-icon">◷</span> My learning</button>
+        <button class="nav-item" data-view="admin"><span class="nav-icon">⚙</span> Admin studio</button>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="help-card">
+          <div class="help-orb">✦</div>
+          <strong>Learning is a journey.</strong>
+          <p>Small steps every day lead to big results.</p>
+          <button class="text-button" id="goLearning">Continue learning <span>→</span></button>
+        </div>
+        <div class="profile-mini">
+          <div class="avatar avatar-purple">AJ</div>
+          <div class="profile-info"><strong id="profileName">Learner</strong><span id="profileRole">Student account</span></div>
+          <button class="more-button" aria-label="Profile options">···</button>
+        </div>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar">
+        <button class="mobile-menu" id="mobileMenu" aria-label="Open navigation">☰</button>
+        <div class="breadcrumb"><span>Workspace</span><span class="crumb-slash">/</span><strong id="pageName">Overview</strong></div>
+        <div class="top-actions">
+          <label class="global-search"><span>⌕</span><input id="globalSearch" type="search" placeholder="Search anything..." aria-label="Search courses"><kbd>⌘ K</kbd></label>
+          <button class="icon-button notification-button" id="notificationButton" aria-label="Notifications">♧<i></i></button>
+          <div class="avatar avatar-purple top-avatar">AJ</div>
+        </div>
+      </header>
+
+      <section class="view active-view" id="view-overview">
+        <div class="welcome-row">
+          <div><div class="eyebrow"><span class="eyebrow-line"></span> MONDAY, OCTOBER 12, 2026</div><h1>Good morning, Alex <span class="wave">✦</span></h1><p class="muted">Ready to make today count? Pick up where you left off.</p></div>
+          <button class="button button-primary" data-go="courses"><span>＋</span> Explore courses</button>
+        </div>
+
+        <div class="hero-banner">
+          <div class="hero-copy">
+            <span class="hero-kicker"><span class="sparkle">✦</span> YOUR NEXT CHAPTER STARTS HERE</span>
+            <h2>Grow your skills.<br><em>Shape your future.</em></h2>
+            <p>Learn from expert-led courses and turn your curiosity into real-world skills.</p>
+            <button class="button button-light" data-go="courses">Find your next course <span>↗</span></button>
+            <div class="hero-social-proof"><div class="avatar-stack"><span>MK</span><span>RI</span><span>AN</span><span>+</span></div><span><strong>10k+</strong> learners growing together</span></div>
+          </div>
+          <div class="hero-art" aria-hidden="true">
+            <div class="art-ring ring-one"></div><div class="art-ring ring-two"></div>
+            <div class="art-card card-float-one"><span class="art-icon">✳</span><div><b>Creative thinking</b><small>Design your ideas</small></div></div>
+            <div class="art-card card-float-two"><span class="art-icon art-icon-blue">⌘</span><div><b>Build something</b><small>One lesson at a time</small></div></div>
+            <div class="art-center"><span>✦</span><small>KEEP</small><b>GROWING</b></div>
+            <div class="art-dot dot-one"></div><div class="art-dot dot-two"></div>
+          </div>
+          <div class="hero-pagination"><span class="active"></span><span></span><span></span></div>
+        </div>
+
+        <div class="section-heading stats-heading"><div><h2>Your learning at a glance</h2><p class="muted">A little progress adds up to a lot.</p></div><span class="date-chip">↗ This month</span></div>
+        <div class="stats-grid">
+          <article class="stat-card"><div class="stat-top"><span class="stat-icon purple-soft">▤</span><span class="stat-trend">+2 this week ↗</span></div><div class="stat-number" id="statEnrolled">3</div><div class="stat-label">Courses enrolled</div><div class="stat-foot"><span class="mini-bar"><i style="width:72%"></i></span><span>Keep it up!</span></div></article>
+          <article class="stat-card"><div class="stat-top"><span class="stat-icon orange-soft">◷</span><span class="stat-trend">+18% ↗</span></div><div class="stat-number">12.5 <small>hrs</small></div><div class="stat-label">Learning time</div><div class="stat-foot"><span class="mini-bar orange-bar"><i style="width:58%"></i></span><span>of 20 hr goal</span></div></article>
+          <article class="stat-card"><div class="stat-top"><span class="stat-icon green-soft">✓</span><span class="stat-trend">Great work!</span></div><div class="stat-number" id="statCompleted">0</div><div class="stat-label">Courses completed</div><div class="stat-foot"><span class="mini-bar green-bar"><i style="width:24%"></i></span><span>You're on track</span></div></article>
+          <article class="stat-card"><div class="stat-top"><span class="stat-icon blue-soft">♧</span><span class="stat-trend">Top 20% ✦</span></div><div class="stat-number">7 <small>days</small></div><div class="stat-label">Learning streak</div><div class="streak-days"><span class="done">M</span><span class="done">T</span><span class="done">W</span><span class="done">T</span><span class="done">F</span><span>S</span><span>S</span></div></article>
+        </div>
+
+        <div class="content-columns">
+          <section class="content-main">
+            <div class="section-heading"><div><h2>Pick up where you left off</h2><p class="muted">Your learning path is waiting for you.</p></div><button class="link-button" data-go="dashboard">View all <span>→</span></button></div>
+            <div class="continue-list" id="continueList"></div>
+            <div class="section-heading recommended-heading"><div><h2>Made for your growth</h2><p class="muted">Popular courses selected for curious minds.</p></div><button class="link-button" data-go="courses">Browse all <span>→</span></button></div>
+            <div class="course-grid" id="featuredCourses"></div>
+          </section>
+          <aside class="content-aside">
+            <section class="panel weekly-panel">
+              <div class="panel-title"><div><h3>Weekly activity</h3><p class="muted">Your learning rhythm</p></div><button class="more-button">···</button></div>
+              <div class="weekly-total"><strong>4.8 <small>hrs</small></strong><span class="positive">↗ 12.5%</span></div>
+              <div class="chart" aria-label="Weekly learning activity chart">
+                <div class="chart-bars"><div><i style="height:36%"></i><span>Mon</span></div><div><i style="height:56%"></i><span>Tue</span></div><div><i style="height:44%"></i><span>Wed</span></div><div><i class="today-bar" style="height:82%"></i><span>Thu</span></div><div><i style="height:62%"></i><span>Fri</span></div><div><i style="height:30%"></i><span>Sat</span></div><div><i style="height:48%"></i><span>Sun</span></div></div>
+              </div>
+              <div class="chart-legend"><span><i></i> Learning hours</span><span>This week</span></div>
+            </section>
+            <section class="panel goal-panel"><div class="panel-title"><div><h3>Weekly goal</h3><p class="muted">You're doing great!</p></div><span class="goal-emoji">✦</span></div><div class="goal-progress"><div class="goal-ring"><div><strong>68%</strong><small>completed</small></div></div><div class="goal-copy"><strong>3.4 of 5 hours</strong><span>1.6 hours left to hit your goal.</span></div></div><button class="button button-outline full-width" data-go="dashboard">View learning plan</button></section>
+            <section class="quote-card"><span>“</span><p>The beautiful thing about learning is that nobody can take it away from you.</p><small>— B.B. King</small><div class="quote-decoration">✳</div></section>
+          </aside>
+        </div>
+      </section>
+
+      <section class="view" id="view-courses">
+        <div class="page-intro"><div><div class="eyebrow"><span class="eyebrow-line"></span> DISCOVER SOMETHING NEW</div><h1>Explore courses</h1><p class="muted">Find the right course to match your goals and curiosity.</p></div><div class="course-total"><strong id="courseTotal">8</strong><span>courses to explore</span></div></div>
+        <div class="course-toolbar"><label class="course-search"><span>⌕</span><input id="courseSearch" type="search" placeholder="Search courses, skills, instructors..."></label><select id="categoryFilter" aria-label="Filter by category"><option>All</option><option>Development</option><option>Design</option><option>Data Science</option><option>Business</option></select><select id="levelFilter" aria-label="Filter by level"><option value="All">All levels</option><option>Beginner</option><option>Intermediate</option><option>Advanced</option></select></div>
+        <div class="category-chips" id="categoryChips"><button class="chip active" data-category="All">All courses <span>8</span></button><button class="chip" data-category="Development">Development</button><button class="chip" data-category="Design">Design</button><button class="chip" data-category="Data Science">Data science</button><button class="chip" data-category="Business">Business</button></div>
+        <div class="course-grid explore-grid" id="allCourses"></div>
+        <div class="empty-state hidden" id="emptyCourses"><span>⌕</span><h3>No courses found</h3><p>Try a different search or category.</p><button class="button button-outline" id="clearFilters">Clear filters</button></div>
+      </section>
+
+      <section class="view" id="view-dashboard">
+        <div class="page-intro"><div><div class="eyebrow"><span class="eyebrow-line"></span> YOUR PERSONAL SPACE</div><h1>My learning</h1><p class="muted">Track your progress and keep your momentum going.</p></div><button class="button button-primary" data-go="courses">＋ Add a course</button></div>
+        <div class="dashboard-summary"><div><span class="summary-icon purple-soft">▤</span><span><small>Enrolled courses</small><strong id="dashEnrolled">3</strong></span></div><div><span class="summary-icon green-soft">✓</span><span><small>Completed courses</small><strong id="dashCompleted">0</strong></span></div><div><span class="summary-icon orange-soft">◷</span><span><small>Average progress</small><strong id="dashAverage">38%</strong></span></div></div>
+        <div class="section-heading dashboard-course-heading"><div><h2>In progress</h2><p class="muted">Continue your courses right where you stopped.</p></div><span class="date-chip">Student ID · STU-1042</span></div>
+        <div class="learning-courses" id="learningCourses"></div>
+        <div class="panel resource-panel"><div class="panel-title"><div><h3>Quick learning resources</h3><p class="muted">Helpful materials to support your progress.</p></div></div><div class="resource-grid"><article><span class="resource-icon purple-soft">▤</span><div><strong>Study notes</strong><p>Quick reference guides for key topics.</p></div><button class="resource-action" data-resource="Study notes">↗</button></article><article><span class="resource-icon orange-soft">✎</span><div><strong>Practice exercises</strong><p>Apply what you learn with mini tasks.</p></div><button class="resource-action" data-resource="Practice exercises">↗</button></article><article><span class="resource-icon blue-soft">▣</span><div><strong>Learning checklist</strong><p>Stay organized and see what is next.</p></div><button class="resource-action" data-resource="Learning checklist">↗</button></article></div></div>
+      </section>
+
+      <section class="view" id="view-admin">
+        <div class="page-intro"><div><div class="eyebrow"><span class="eyebrow-line"></span> COURSE MANAGEMENT</div><h1>Admin studio</h1><p class="muted">Manage your course library and keep learning content fresh.</p></div><span class="admin-badge"><i></i> Role-protected admin</span></div>
+        <div class="admin-stats"><div class="panel admin-stat"><span class="stat-icon purple-soft">▤</span><small>Total courses</small><strong id="adminCoursesCount">8</strong></div><div class="panel admin-stat"><span class="stat-icon green-soft">♧</span><small>Demo learners</small><strong id="adminStudentsCount">3</strong></div><div class="panel admin-stat"><span class="stat-icon orange-soft">✦</span><small>Course categories</small><strong id="adminCategoriesCount">4</strong></div></div>
+        <div class="admin-layout">
+          <section class="panel add-course-panel"><div class="panel-title"><div><h3>Add a new course</h3><p class="muted">New courses appear in the catalog immediately.</p></div><span class="form-badge">＋ Create</span></div>
+            <form id="addCourseForm" class="admin-form">
+              <label>Course title<input name="title" required maxlength="90" placeholder="e.g. Introduction to Cloud Computing"></label>
+              <div class="form-row"><label>Category<select name="category" required><option value="Development">Development</option><option value="Design">Design</option><option value="Data Science">Data Science</option><option value="Business">Business</option></select></label><label>Level<select name="level" required><option>Beginner</option><option>Intermediate</option><option>Advanced</option></select></label></div>
+              <div class="form-row"><label>Instructor<input name="instructor" required placeholder="Instructor name"></label><label>Duration<input name="duration" required placeholder="e.g. 4h 30m"></label></div>
+              <label>Description<textarea name="description" rows="4" required maxlength="300" placeholder="What will students learn in this course?"></textarea></label>
+              <button class="button button-primary full-width" type="submit">＋ Publish course</button><p class="form-note">Saved securely to Supabase. Admin access is checked by database policies.</p>
+            </form>
+          </section>
+          <section class="panel admin-library"><div class="panel-title"><div><h3>Course library</h3><p class="muted">Review or remove courses.</p></div><span class="library-count" id="libraryCount">8 items</span></div><div id="adminCourseList" class="admin-course-list"></div></section>
+        </div>
+        <div class="notice-box"><span>ⓘ</span><p><strong>Protected admin workspace</strong><br>Course changes require the configured admin role enforced by Supabase Row Level Security.</p></div>
+      </section>
+
+      <footer class="footer"><a class="brand footer-brand" href="#"><span class="brand-mark"><span></span><span></span><span></span></span><span>learn<span class="brand-dot">.</span>hub</span></a><span>© 2026 E-Learning Resource Hub · Learn something wonderful.</span><span class="footer-status"><i></i> All systems operational</span></footer>
+    </main>
+  </div>
+
+  <div id="authGate" style="position:fixed;inset:0;z-index:9999;background:#f6f7fb;display:flex;align-items:center;justify-content:center;padding:24px;overflow:auto">
+    <div style="width:min(440px,100%);background:#fff;border:1px solid #e7e9f2;border-radius:24px;padding:30px;box-shadow:0 20px 70px #20254418;color:#20243a">
+      <div style="font-weight:800;font-size:24px;margin-bottom:6px">learn<span style="color:#7b61ff">.</span>hub</div>
+      <p style="color:#70758b;margin:0 0 22px">Sign in to continue learning.</p>
+      <div style="display:flex;gap:8px;margin-bottom:18px"><button id="authLoginTab" type="button" class="button button-primary" style="flex:1">Sign in</button><button id="authSignupTab" type="button" class="button button-outline" style="flex:1">Create account</button></div>
+      <form id="authForm" style="display:grid;gap:12px">
+        <label style="display:grid;gap:6px;font-size:13px;font-weight:700">Full name <input id="authName" autocomplete="name" placeholder="Your name" style="padding:12px;border:1px solid #dfe2ed;border-radius:10px;color:#20243a" /></label>
+        <label style="display:grid;gap:6px;font-size:13px;font-weight:700">Email <input id="authEmail" type="email" required autocomplete="email" placeholder="you@example.com" style="padding:12px;border:1px solid #dfe2ed;border-radius:10px;color:#20243a" /></label>
+        <label style="display:grid;gap:6px;font-size:13px;font-weight:700">Password <input id="authPassword" type="password" required minlength="8" autocomplete="current-password" placeholder="At least 8 characters" style="padding:12px;border:1px solid #dfe2ed;border-radius:10px;color:#20243a" /></label>
+        <button id="authSubmit" class="button button-primary full-width" type="submit">Sign in</button>
+        <button id="authReset" class="text-button" type="button" style="justify-self:center">Forgot password?</button>
+        <p id="authMessage" role="status" style="margin:0;font-size:13px;color:#70758b;line-height:1.5"></p>
+      </form>
+    </div>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"><span class="toast-check">✓</span><span id="toastMessage">Done!</span></div>
+  <div class="modal-backdrop hidden" id="courseModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><div class="course-modal"><button class="modal-close" id="modalClose" aria-label="Close dialog">×</button><div id="modalBody"></div></div></div>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="supabase-config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
